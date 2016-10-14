@@ -635,12 +635,12 @@ SpectrumDisplayForm::waterfallAutoScaleBtnCB()
     maximumIntensity = WaterfallMaximumIntensitySlider->maxValue();
   }
 #else /* QWT_VERSION < 0x060100 */
-  if(minimumIntensity < WaterfallMinimumIntensitySlider->lowerBound()) {
-    minimumIntensity = WaterfallMinimumIntensitySlider->lowerBound();
+  if(minimumIntensity < WaterfallMinimumIntensitySlider->lBound()) {
+    minimumIntensity = WaterfallMinimumIntensitySlider->lBound();
   }
   WaterfallMinimumIntensitySlider->setValue(minimumIntensity);
-  if(maximumIntensity > WaterfallMaximumIntensitySlider->upperBound()) {
-    maximumIntensity = WaterfallMaximumIntensitySlider->upperBound();
+  if(maximumIntensity > WaterfallMaximumIntensitySlider->hBound()) {
+    maximumIntensity = WaterfallMaximumIntensitySlider->hBound();
   }
 #endif /* QWT_VERSION < 0x060100 */
 

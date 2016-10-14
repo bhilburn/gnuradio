@@ -544,16 +544,16 @@ FreqDisplayForm::notifyYAxisPlus()
 {
 #if QWT_VERSION < 0x060100
   QwtScaleDiv *ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax->upperBound() - ax->lowerBound();
+  double range = ax->hBound() - ax->lBound();
   double step = range/20.0;
-  getPlot()->setYaxis(ax->lowerBound()+step, ax->upperBound()+step);
+  getPlot()->setYaxis(ax->lBound()+step, ax->hBound()+step);
 
 #else
 
   QwtScaleDiv ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax.upperBound() - ax.lowerBound();
+  double range = ax.hBound() - ax.lBound();
   double step = range/20.0;
-  getPlot()->setYaxis(ax.lowerBound()+step, ax.upperBound()+step);
+  getPlot()->setYaxis(ax.lBound()+step, ax.hBound()+step);
 #endif
 }
 
@@ -562,16 +562,16 @@ FreqDisplayForm::notifyYAxisMinus()
 {
 #if QWT_VERSION < 0x060100
   QwtScaleDiv *ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax->upperBound() - ax->lowerBound();
+  double range = ax->hBound() - ax->lBound();
   double step = range/20.0;
-  getPlot()->setYaxis(ax->lowerBound()-step, ax->upperBound()-step);
+  getPlot()->setYaxis(ax->lBound()-step, ax->hBound()-step);
 
 #else
 
   QwtScaleDiv ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax.upperBound() - ax.lowerBound();
+  double range = ax.hBound() - ax.lBound();
   double step = range/20.0;
-  getPlot()->setYaxis(ax.lowerBound()-step, ax.upperBound()-step);
+  getPlot()->setYaxis(ax.lBound()-step, ax.hBound()-step);
 #endif
 }
 
@@ -580,16 +580,16 @@ FreqDisplayForm::notifyYRangePlus()
 {
 #if QWT_VERSION < 0x060100
   QwtScaleDiv *ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax->upperBound() - ax->lowerBound();
+  double range = ax->hBound() - ax->lBound();
   double step = range/20.0;
-  getPlot()->setYaxis(ax->lowerBound()-step, ax->upperBound()+step);
+  getPlot()->setYaxis(ax->lBound()-step, ax->hBound()+step);
 
 #else
 
   QwtScaleDiv ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax.upperBound() - ax.lowerBound();
+  double range = ax.hBound() - ax.lBound();
   double step = range/20.0;
-  getPlot()->setYaxis(ax.lowerBound()-step, ax.upperBound()+step);
+  getPlot()->setYaxis(ax.lBound()-step, ax.hBound()+step);
 #endif
 }
 
@@ -598,16 +598,16 @@ FreqDisplayForm::notifyYRangeMinus()
 {
 #if QWT_VERSION < 0x060100
   QwtScaleDiv *ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax->upperBound() - ax->lowerBound();
+  double range = ax->hBound() - ax->lBound();
   double step = range/20.0;
-  getPlot()->setYaxis(ax->lowerBound()+step, ax->upperBound()-step);
+  getPlot()->setYaxis(ax->lBound()+step, ax->hBound()-step);
 
 #else
 
   QwtScaleDiv ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax.upperBound() - ax.lowerBound();
+  double range = ax.hBound() - ax.lBound();
   double step = range/20.0;
-  getPlot()->setYaxis(ax.lowerBound()+step, ax.upperBound()-step);
+  getPlot()->setYaxis(ax.lBound()+step, ax.hBound()-step);
 #endif
 }
 

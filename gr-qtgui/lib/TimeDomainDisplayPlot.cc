@@ -580,9 +580,9 @@ TimeDomainDisplayPlot::setSemilogy(bool en)
     d_semilogy = en;
 
 #if QWT_VERSION < 0x060100
-    double max = axisScaleDiv(QwtPlot::yLeft)->upperBound();
+    double max = axisScaleDiv(QwtPlot::yLeft)->hBound();
 #else /* QWT_VERSION < 0x060100 */
-    double max = axisScaleDiv(QwtPlot::yLeft).upperBound();
+    double max = axisScaleDiv(QwtPlot::yLeft).hBound();
 #endif /* QWT_VERSION < 0x060100 */
 
     if(!d_semilogy) {

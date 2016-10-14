@@ -533,16 +533,16 @@ TimeDisplayForm::notifyYAxisPlus()
 {
 #if QWT_VERSION < 0x060100
   QwtScaleDiv *ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax->upperBound() - ax->lowerBound();
+  double range = ax->hBound() - ax->lBound();
   double step = range/20.0;
-  getPlot()->setYaxis(ax->lowerBound()+step, ax->upperBound()+step);
+  getPlot()->setYaxis(ax->lBound()+step, ax->hBound()+step);
 
 #else
 
   QwtScaleDiv ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax.upperBound() - ax.lowerBound();
+  double range = ax.hBound() - ax.lBound();
   double step = range/20.0;
-  getPlot()->setYaxis(ax.lowerBound()+step, ax.upperBound()+step);
+  getPlot()->setYaxis(ax.lBound()+step, ax.hBound()+step);
 #endif
 }
 
@@ -551,16 +551,16 @@ TimeDisplayForm::notifyYAxisMinus()
 {
 #if QWT_VERSION < 0x060100
   QwtScaleDiv *ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax->upperBound() - ax->lowerBound();
+  double range = ax->hBound() - ax->lBound();
   double step = range/20.0;
-  getPlot()->setYaxis(ax->lowerBound()-step, ax->upperBound()-step);
+  getPlot()->setYaxis(ax->lBound()-step, ax->hBound()-step);
 
 #else
 
   QwtScaleDiv ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax.upperBound() - ax.lowerBound();
+  double range = ax.hBound() - ax.lBound();
   double step = range/20.0;
-  getPlot()->setYaxis(ax.lowerBound()-step, ax.upperBound()-step);
+  getPlot()->setYaxis(ax.lBound()-step, ax.hBound()-step);
 #endif
 }
 
@@ -569,16 +569,16 @@ TimeDisplayForm::notifyYRangePlus()
 {
 #if QWT_VERSION < 0x060100
   QwtScaleDiv *ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax->upperBound() - ax->lowerBound();
+  double range = ax->hBound() - ax->lBound();
   double step = range/20.0;
-  getPlot()->setYaxis(ax->lowerBound()-step, ax->upperBound()+step);
+  getPlot()->setYaxis(ax->lBound()-step, ax->hBound()+step);
 
 #else
 
   QwtScaleDiv ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax.upperBound() - ax.lowerBound();
+  double range = ax.hBound() - ax.lBound();
   double step = range/20.0;
-  getPlot()->setYaxis(ax.lowerBound()-step, ax.upperBound()+step);
+  getPlot()->setYaxis(ax.lBound()-step, ax.hBound()+step);
 #endif
 }
 
@@ -587,16 +587,16 @@ TimeDisplayForm::notifyYRangeMinus()
 {
 #if QWT_VERSION < 0x060100
   QwtScaleDiv *ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax->upperBound() - ax->lowerBound();
+  double range = ax->hBound() - ax->lBound();
   double step = range/20.0;
-  getPlot()->setYaxis(ax->lowerBound()+step, ax->upperBound()-step);
+  getPlot()->setYaxis(ax->lBound()+step, ax->hBound()-step);
 
 #else
 
   QwtScaleDiv ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax.upperBound() - ax.lowerBound();
+  double range = ax.hBound() - ax.lBound();
   double step = range/20.0;
-  getPlot()->setYaxis(ax.lowerBound()+step, ax.upperBound()-step);
+  getPlot()->setYaxis(ax.lBound()+step, ax.hBound()-step);
 #endif
 }
 
@@ -651,12 +651,12 @@ TimeDisplayForm::notifyTriggerLevelPlus()
 {
 #if QWT_VERSION < 0x060100
   QwtScaleDiv *ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax->upperBound() - ax->lowerBound();
+  double range = ax->hBound() - ax->lBound();
 
 #else
 
   QwtScaleDiv ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax.upperBound() - ax.lowerBound();
+  double range = ax.hBound() - ax.lBound();
 #endif
 
   double step = range/20.0;
@@ -668,12 +668,12 @@ TimeDisplayForm::notifyTriggerLevelMinus()
 {
 #if QWT_VERSION < 0x060100
   QwtScaleDiv *ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax->upperBound() - ax->lowerBound();
+  double range = ax->hBound() - ax->lBound();
 
 #else
 
   QwtScaleDiv ax = getPlot()->axisScaleDiv(QwtPlot::yLeft);
-  double range = ax.upperBound() - ax.lowerBound();
+  double range = ax.hBound() - ax.lBound();
 #endif
 
   double step = range/20.0;
@@ -685,12 +685,12 @@ TimeDisplayForm::notifyTriggerDelayPlus()
 {
 #if QWT_VERSION < 0x060100
   QwtScaleDiv *ax = getPlot()->axisScaleDiv(QwtPlot::xBottom);
-  double range = ax->upperBound() - ax->lowerBound();
+  double range = ax->hBound() - ax->lBound();
 
 #else
 
   QwtScaleDiv ax = getPlot()->axisScaleDiv(QwtPlot::xBottom);
-  double range = ax.upperBound() - ax.lowerBound();
+  double range = ax.hBound() - ax.lBound();
 #endif
 
   double step = range/20.0;
@@ -703,12 +703,12 @@ TimeDisplayForm::notifyTriggerDelayMinus()
 {
 #if QWT_VERSION < 0x060100
   QwtScaleDiv *ax = getPlot()->axisScaleDiv(QwtPlot::xBottom);
-  double range = ax->upperBound() - ax->lowerBound();
+  double range = ax->hBound() - ax->lBound();
 
 #else
 
   QwtScaleDiv ax = getPlot()->axisScaleDiv(QwtPlot::xBottom);
-  double range = ax.upperBound() - ax.lowerBound();
+  double range = ax.hBound() - ax.lBound();
 #endif
 
   double step = range/20.0;
